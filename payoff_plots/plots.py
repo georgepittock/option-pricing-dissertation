@@ -23,7 +23,7 @@ fig, axs = plt.subplots()
 
 axs.plot(price_at_maturity, call_payoffs, color="blue")
 
-axs.set_xlabel("Price at initial_stock_price(maturity_time)")
+axs.set_xlabel("Price at S(T)")
 axs.set_xticks([100], labels=["K"])
 axs.set_xticklabels(["K"], color="black")
 
