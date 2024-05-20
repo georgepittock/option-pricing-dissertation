@@ -41,13 +41,13 @@ def run(n):
     put_payoffs = []
     call_payoffs = []
     for option in all_options:
+        print(option.option_type)
         if option.option_type == "put":
             put_options.append(option)
             put_payoffs.append(option.payoff())
         if option.option_type == "call":
             call_options.append(option)
             call_payoffs.append(option.payoff())
-
     mae, rmse = calculate_errors(
         np.concatenate(
             [NeuralNetwork(put_options).price(), NeuralNetwork(call_options).price()]
@@ -60,4 +60,4 @@ def run(n):
 
 
 if __name__ == "__main__":
-    run(5000)
+    run(500)
